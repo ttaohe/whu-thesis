@@ -297,6 +297,23 @@
       { \markboth {#1} {#1} }
       { \markboth { \hfill #1 \hfill } { } }
   }
+\NewDocumentCommand \whuchapter { m m }
+  {
+    \setcounter{chapter}{#1}
+    \setcounter{section}{0}
+    \setcounter{subsection}{0}
+    \setcounter{subsubsection}{0}
+    \group_begin:
+      \ctexset
+        {
+          chapter / numbering = false,
+          chapter / format = \zihao{-2}\heiti\centering,
+        }
+      \chapter*{\texorpdfstring{第\zhnumber{#1}章\quad #2}{第#1章 #2}}
+    \group_end:
+    \addcontentsline{toc}{chapter}{\texorpdfstring{第\zhnumber{#1}章\quad #2}{第#1章 #2}}
+    \__whu_chapter_header:n {第\zhnumber{#1}章\quad #2}
+  }
 %endregion 基本函数
 
 %region 处理文档类的选项

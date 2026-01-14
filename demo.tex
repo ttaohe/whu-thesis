@@ -11,25 +11,28 @@
 
 \whusetup{
   info = {
-    title      = {论文题目，楷体一号}, % 标题，可使用 \\ 手动换行
-    title*     = {A QoS-aware Self-Adaptive System Approach in Service Computing Environment},
-    department  = {数学与统计学院},
-    department* = {School of Mathematics and Statistics},
-    author     = {张三},
-    author*    = {Xxxxxx Xxxxx},
-    student-id = {2021202012345},
-    supervisor  = {李某某},
-    supervisor* = {Xxx Xxxxx},
+    title      = {非完备观测下无人机多视角时空协同的目标检测方法研究}, % 标题，可使用 \\ 手动换行
+    title*     = {Research on Object Detection Method of UAV Multi-view Spatio-temporal Collaboration under Incomplete Observation}, % 英文标题
+    department  = {测绘遥感信息工程全国重点实验室},
+    department* = {\parbox{0.9\linewidth}{\centering
+    \linespread{0.7}\selectfont
+    State Key Laboratory of Information Engineering\\
+    in Surveying, Mapping and Remote Sensing\\[4pt]}},
+    author     = {何涛},
+    author*    = {Tao He},
+    student-id = {2023206190029},
+    supervisor  = {孙开敏},
+    supervisor* = {Kaimin Sun},
     academic-title  = {教授},
     academic-title* = {Prof},
     % supervisor-outer = {王某某}, % 校外导师（非必填）
     % academic-title-outer = {高级工程师}, % 校外导师职称（非必填）
-    subject = {英语}, % 学科名称（非必填）
-    major   = {英国语言文学},
-    major*  = {English language and literature},
-    research-area  = {英语语言学},
-    research-area* = {Operator Theory},
-    year = 2024,
+    subject = {计算机科学与技术}, % 学科名称（非必填）
+    major   = {计算机应用技术},
+    major*  = {Computer Application Technology},
+    research-area  = {目标检测},
+    research-area* = {Object Detection},
+    year = 2026,
     month = 4,
     % clc = , % 分类号
     % udc = ,
@@ -40,11 +43,12 @@
     % 字体相关选项
     font = termes, % 西文字体，可选项为 default, times, xits, termes
     math-font = termes, % 数学字体，可选项为 default, xits, termes
-    cjk-font = mac, % 中文字体，可选项为 windows, mac, fandol(Linux/Overleaf/TexPage), sourcehan, none
+    cjk-font = windows, % 中文字体，可选项为 windows, mac, fandol(Linux/Overleaf/TexPage), sourcehan, none
     % cjk-fakefont = true, % 使用伪粗体与伪斜体
     % 参考文献及引用相关选项
     bib-backend = bibtex, % 参考文献引擎，可选项为 bibtex, biblatex
-    % bib-style = numerical, % 参考文献样式，可选项为 numerical, author-year
+    bib-style = numerical, % 参考文献样式，可选项为 numerical, author-year
+    cite-style = super,
     % cite-style = <>, % 引用样式（自定义）
     bib-resource = {ref/bachelor-refs.bib}, % 参考文献数据源
     % 页面相关选项
@@ -58,6 +62,7 @@
     % abstract-keywords-type* = blankline, % 摘要与关键词之间样式，可选项为 blankline, newline, vfill
   }
 }
+\hypersetup{hidelinks}
 \whumodule{algorithm2e}
 \begin{document}
 % \raggedbottom % 使得空白都置于每一页底部，可参考 https://github.com/whutug/whu-thesis/issues/276
@@ -75,8 +80,13 @@
 \mainmatter
 
 \include{pages/chapter1.tex}
+\include{pages/chapter2.tex}
+\include{pages/chapter3.tex}
+\include{pages/chapter4.tex}
+\include{pages/chapter5.tex}
+\include{pages/chapter6.tex}
 % 当然你也可以直接在这里写，不过这样不太方便管理
-\chapter{BBBB}
+% \chapter{BBBB}
 
 
 % 参考文献
